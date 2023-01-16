@@ -44,7 +44,7 @@ If the block destruction is turned off, no block will be affect by the explosion
 
 ![](assets/create-fire.jpg)
 
-### Power Multiplexer
+### Power Multiplier
 
 ```mclang
 /gamerule xxxExplosionMultiplier <value>
