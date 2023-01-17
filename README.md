@@ -20,11 +20,11 @@ This is a mod allows you to modify explosion behaviours by gamerules.
 | `witherExplosionCreateFire`         | Boolean    | Wither, Wither Skull |
 | `tntExplosionCreateFire`            | Boolean    | TNT, TNT Minecart    |
 | `blockExplosionCreateFire`          | Boolean    | Bed, Respawn Ancher  |
-| `creeperExplosionMultiplier`        | Boolean    | Creeper              |
-| `ghastFireBallExplosionMultiplier`  | Boolean    | Ghast FireBall       |
-| `witherExplosionMultiplier`         | Boolean    | Wither, Wither Skull |
-| `tntExplosionMultiplier`            | Boolean    | TNT, TNT Minecart    |
-| `blockExplosionMultiplier`          | Boolean    | Bed, Respawn Ancher  |
+| `creeperExplosionMultiplier`        | Double     | Creeper              |
+| `ghastFireBallExplosionMultiplier`  | Double     | Ghast FireBall       |
+| `witherExplosionMultiplier`         | Double     | Wither, Wither Skull |
+| `tntExplosionMultiplier`            | Double     | TNT, TNT Minecart    |
+| `blockExplosionMultiplier`          | Double     | Bed, Respawn Ancher  |
 
 ### Block Destruction
 
