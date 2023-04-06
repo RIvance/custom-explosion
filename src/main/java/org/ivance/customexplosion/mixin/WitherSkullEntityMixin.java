@@ -24,7 +24,7 @@ public abstract class WitherSkullEntityMixin extends ExplosiveProjectileEntity {
      * @reason Overwrite the onCollision method
      */
     @Overwrite
-    protected void onCollision(HitResult hitResult) {
+    public void onCollision(HitResult hitResult) {
         super.onCollision(hitResult);
         if (!this.world.isClient) {
             boolean createFire = this.world.getGameRules().get(ExplosionGameRules.createFire(Explosive.WITHER)).get();

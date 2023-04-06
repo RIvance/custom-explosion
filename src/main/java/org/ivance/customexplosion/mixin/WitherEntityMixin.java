@@ -23,7 +23,7 @@ public abstract class WitherEntityMixin extends Entity {
     }
 
     @Inject(method = "mobTick", at = @At(value = "INVOKE_ASSIGN", target = WORLD_CREATE_EXPLOSION))
-    void explode(CallbackInfo callback) {
+    protected void explode(CallbackInfo callback) {
         boolean createFire = this.world.getGameRules().get(ExplosionGameRules.createFire(Explosive.WITHER)).get();
         double multiplier = this.world.getGameRules().get(ExplosionGameRules.multiplier(Explosive.WITHER)).get();
 

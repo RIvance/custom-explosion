@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 
 @Mixin(FireballEntity.class)
-public class FireBallEntityMixin extends AbstractFireballEntity {
+public abstract class FireBallEntityMixin extends AbstractFireballEntity {
 
     @Shadow private int explosionPower;
 
@@ -27,7 +27,7 @@ public class FireBallEntityMixin extends AbstractFireballEntity {
      * @reason Overwrite the onCollision method
      */
     @Overwrite
-    protected void onCollision(HitResult hitResult) {
+    public void onCollision(HitResult hitResult) {
         super.onCollision(hitResult);
         if (!this.world.isClient) {
             boolean createFire = this.world.getGameRules().get(ExplosionGameRules.createFire(Explosive.GHAST_FIREBALL)).get();

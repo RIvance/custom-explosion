@@ -17,13 +17,12 @@ public abstract class TntMinecartEntityMixin extends Entity {
         super(type, world);
     }
 
-
     /**
      * @author Ivance
      * @reason Overwrite the explode method
      */
     @Overwrite
-    protected void explode(double velocity) {
+    public void explode(double velocity) {
         if (!this.world.isClient) {
             double d = Math.sqrt(velocity);
             if (d > 5.0) {

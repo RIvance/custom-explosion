@@ -27,8 +27,8 @@ public abstract class CreeperEntityMixin extends Entity {
 
     private final static String WORLD_CREATE_EXPLOSION = "Lnet/minecraft/world/World;createExplosion(Lnet/minecraft/entity/Entity;DDDFLnet/minecraft/world/explosion/Explosion$DestructionType;)Lnet/minecraft/world/explosion/Explosion;";
 
-    @Inject(method = "explode", at = @At(value = "INVOKE", target = WORLD_CREATE_EXPLOSION))
-    public void explode(CallbackInfo ci) {
+    @Inject(method = "explode", cancellable = true, at = @At(value = "INVOKE", target = WORLD_CREATE_EXPLOSION))
+    public void explode(CallbackInfo callback) {
         boolean createFire = this.world.getGameRules().get(ExplosionGameRules.createFire(Explosive.CREEPER)).get();
         double multiplier = this.world.getGameRules().get(ExplosionGameRules.multiplier(Explosive.CREEPER)).get();
 
@@ -45,5 +45,6 @@ public abstract class CreeperEntityMixin extends Entity {
 
         this.discard();
         this.spawnEffectsCloud();
+        callback.cancel();
     }
 }
