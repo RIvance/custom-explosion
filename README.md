@@ -1,6 +1,6 @@
 # Custom Explosions
 
-[![ModLoader|Fabric](https://img.shields.io/badge/ModLoader-Fabric-brightgreen)](https://fabricmc.net/)[![ModLoader|Fabric](https://img.shields.io/badge/Minecraft-1.19.3-blue)](https://fabricmc.net/)
+[![ModLoader|Fabric](https://img.shields.io/badge/ModLoader-Fabric-brightgreen)](https://fabricmc.net/)[![ModLoader|Fabric](https://img.shields.io/badge/Minecraft-1.19.2--1.19.4-blue)](https://fabricmc.net/)
 
 This is a mod allows you to modify explosion behaviours by gamerules. 
 
